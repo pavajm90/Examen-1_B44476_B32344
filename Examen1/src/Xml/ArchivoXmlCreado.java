@@ -52,9 +52,8 @@ public class ArchivoXmlCreado
             habitacion.appendChild(color); 
             //Añadimos valor
             color.appendChild(valorColor); 
-         }catch(Exception e)
-         {
-             System.err.println("Error");
+         }catch(Exception e){
+             System.err.println("Error);
          }
     }
 

@@ -4,9 +4,11 @@
  * and open the template in the editor.
  */
 package Vista;
+import Modelo.ArrayListPersona;
 import Modelo.Persona;
 import Vista.Cedula;
 import javax.swing.JOptionPane;
+import sun.util.locale.provider.AuxLocaleProviderAdapter;
 /**
  *
  * @author Gabriel
@@ -16,6 +18,9 @@ public class Agregar extends javax.swing.JPanel {
     /**
      * Creates new form Agregar
      */
+    Cedula cedula = new Cedula();
+    Persona persona;
+    ArrayListPersona array;
     public Agregar() {
         initComponents();
     }
@@ -65,9 +70,12 @@ public class Agregar extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAgregarActionPerformed
-        
-      
-        
+        String auxCedula = "";
+        String auxLocalizacion = "";
+        auxCedula= cedula.getCedula();
+        auxLocalizacion= cedula.getLocalizacion();
+        persona = new Persona(auxCedula, auxLocalizacion);
+        array.insertarElemento(persona);
         JOptionPane.showMessageDialog(null, "Persona Agregada");
     }//GEN-LAST:event_jbAgregarActionPerformed
 

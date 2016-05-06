@@ -18,7 +18,7 @@ public class Persona
     @Anotacion
     private String prodecencia;
    
-    @Anotacion(guardar_xml = false)
+   // @Anotacion(guardar_xml = false)
     
     
     public Persona(String ID,

@@ -11,17 +11,17 @@ public class ArrayListPersona {
  
   /* Crea un ArrayListPersona y le decimos que almacenara
   * objetos de tipo persona*/
- private ArrayList<Persona>Lista;
+ private ArrayList<Persona>lista;
     private int persona;
  
  public ArrayListPersona(){
-  Lista =new ArrayList<Persona>();
+  lista =new ArrayList<Persona>();
  }
  
  /*Este metodo inserta un objeto de tipo persona
   * usando el metodo add(Object arg)*/
  public void insertarElemento(Persona persona){  
-    Lista.add(persona);
+    lista.add(persona);
     JOptionPane.showMessageDialog(null,"Persona insertada a la lista");
  }
  
@@ -33,27 +33,24 @@ public class ArrayListPersona {
   * El metodo remove elimina el objeto del ArrayListPersona */
  public void eliminarPersona(String ID, Object Persona){
      Persona personaEliminar = null;
-   for(int indice=0;indice < Lista.size() ; indice++){
-      if(Lista.get(indice).getID()  == ID) 
-      personaEliminar = Lista.get(indice);
+   for(int indice=0;indice < lista.size() ; indice++){
+      if(lista.get(indice).getID()  == ID) 
+      personaEliminar = lista.get(indice);
    }
    if ( personaEliminar == null) {
       JOptionPane.showMessageDialog(null,"La persona no se encuentra en la lista"); }
    else  {
       JOptionPane.showMessageDialog(null," SE ELIMINÓ DE LA LISTA");
   
-      Lista.remove( persona);
-   }
+      lista.remove( persona);
  }
  
- 
- 
+ //Elimina todo el contenido del ArrayListPersona
+
  
  // Retorna el tamaño de la lista actualmente
- public int getTamañoLista(){
-    return Lista.size();
- }
- 
- 
 
+ 
+ 
+}
 }

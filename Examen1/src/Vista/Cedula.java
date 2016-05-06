@@ -5,17 +5,11 @@
  */
 package Vista;
 
-import Modelo.Persona;
-import static com.oracle.webservices.internal.api.databinding.DatabindingModeFeature.ID;
-import java.util.ArrayList;
-
 /**
  *
  * @author Gabriel
  */
 public class Cedula extends javax.swing.JPanel {
-    
-    ArrayList<Persona>persona= new ArrayList();
 
     /**
      * Creates new form Cedula
@@ -219,7 +213,40 @@ public class Cedula extends javax.swing.JPanel {
     private void rbRefugiadoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_rbRefugiadoItemStateChanged
         modificarEstado();
     }//GEN-LAST:event_rbRefugiadoItemStateChanged
-
+    public String getCedula()
+    {
+        String cedula="";
+        if(rbCiudadano.isSelected()==true){
+            cedula=cCiudadano.getText();
+        }
+        if(rbIndigena.isSelected()==true){
+            cedula=cIndigena.getText();
+        }
+        if(rbInmigrante.isSelected()==true){
+            cedula=cInmigrante.getText();
+        }
+        if(rbRefugiado.isSelected()==true){
+            cedula=cRefugiado.getText();
+        }
+        return cedula;
+    }
+     public String getLocalizacion()
+    {
+        String localizacion="";
+        if(rbCiudadano.isSelected()==true){
+            localizacion=lCiudadano.getText();
+        }
+        if(rbIndigena.isSelected()==true){
+            localizacion=lIndigena.getText();
+        }
+        if(rbInmigrante.isSelected()==true){
+            localizacion=lInmigrante.getText();
+        }
+        if(rbRefugiado.isSelected()==true){
+            localizacion=lRefugiado.getText();
+        }
+        return localizacion;
+    }
     public void modificarEstado(){
     if(rbCiudadano.isSelected()==true){
         cCiudadano.setEditable(true);
@@ -245,9 +272,9 @@ public class Cedula extends javax.swing.JPanel {
         lRefugiado.setEditable(false);
     }
     }
-    public void datos(Object Persona, int cCuidadano)
+    public void datos(Object Persona)
     {
-       persona.(cCuidadano,ID);
+        
     
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
